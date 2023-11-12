@@ -16,6 +16,13 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+let cumLaudeStudents = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8){
+       cumLaudeStudents++;
+    }
+}
+console.log(cumLaudeStudents);
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -26,9 +33,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
+function cumLaude(array){
+    let cumLaudeCheck = 0;
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] >= 8)
+        cumLaudeCheck++;
+        } return cumLaudeCheck;
+    }
 
-
-
+console.log(cumLaude(grades));
+console.log(cumLaude([6,4,5]));
+console.log(cumLaude([8,9,4,6,10]));
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -41,6 +56,8 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+
+
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
